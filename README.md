@@ -14,4 +14,4 @@
     if ( this.body.length > 1 ) this.body[ this.body.length-1 ] = this.body[ this.body.length-2 ].copy()
     // adding the direction to the head
     this.getHead().add( vDir )
-  }
+  }```
