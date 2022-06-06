@@ -10,7 +10,7 @@
     + Copy your characters indexed by their code, sub 32 [ first chr == space ] and mult by the width [ here , 64px ] - You've got it's x index !
     + Ex : 
       +  "!" -> Code ASCII -> 33 
-      +  (33 - 32) * 64 -> 64, la pos° x du caractere "!" dans le bitmap.
+      +  (33 - 32) * 64 -> 64, x index/pos° of "!" into the bitmap.
 ![ASCII-Ordered-Font](https://github.com/CaptainFurax/p5xjs-Old-Fashionned-ScrollText/blob/main/FONT-32x32-st.png)
 ```javascript
   for ( i = 0; i < snts.length; i++ ) { 
