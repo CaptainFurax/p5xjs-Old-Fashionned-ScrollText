@@ -1,11 +1,14 @@
 p5.disableFriendlyErrors = true;
 preload=_=> { fnt = loadImage("rsc/font-ascii_64x64.png"); }
+let cvSiz;
 //
 setup=_=> {
+
   pixelDensity(1);
   frameRate(50);
   angleMode(DEGREES);
-  createCanvas(640, 480).parent("s1");
+  cvSiz = createVector(640,480);
+  createCanvas(cvSiz.x, cvSiz.y).id("mainCanvas");
   //
   ix = 656; sino = fade = 0; p = -1;
   //
@@ -68,7 +71,7 @@ setup=_=> {
       blocks[i][j].image( fnt.get((snts[i].charCodeAt(j)-32)*64, 0, 64, 64),0, 0, 64, 64 );
     }
   }
-
+  windowResized();
   SwapMeIamFamous();
 }
 const sleep = (millis) => { 
@@ -115,4 +118,17 @@ SwapMeIamFamous=_=>
   buffers[1].image( buffers[0].get(0, 400, 640, 80), 0, 0, 640, 80 );
   buffers[1].image( buffers[0].get(0,0,640,400), 0, 80, 640, 400 );
   buffers[0,1] = buffers[1,0];
+}
+
+windowResized=_=>{
+  let ratio  = createVector( windowWidth / cvSiz.x, windowHeight / cvSiz.y );
+  if ( windowWidth > windowHeight && ratio.x > ratio.y )
+  {
+    select("#mainCanvas").style("width", round(cvSiz.x * ratio.y) + "px");
+    select("#mainCanvas").style("height", windowHeight + "px");
+  } else
+  {
+    select("#mainCanvas").style("width", windowWidth  + "px");
+    select("#mainCanvas").style("height", round(cvSiz.y * ratio.x) + "px");
+  }
 }
