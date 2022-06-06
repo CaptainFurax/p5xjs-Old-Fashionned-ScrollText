@@ -29,3 +29,13 @@ blocks[i][j].image( fnt.get((snts[i].charCodeAt(j)-32)*64, 0, 64, 64), 0, 0, 64,
 // than "copy" function :
 blocks[i][j].copy( fnt, (snts[i].charCodeAt(j)-32)*64, 0, 64, 64, 0, 0, 64, 64 );
 ```
+  + Shifting/scrolling the buffered rasters with 2 logical screens :
+```javascript
+SwapMeIamFamous=_=>
+{
+  (p=(++p)%blocks.length);
+  buffers[1].image( buffers[0].get(0, 400, 640, 80), 0, 0, 640, 80 );
+  buffers[1].image( buffers[0].get(0,0,640,400), 0, 80, 640, 400 );
+  buffers[0,1] = buffers[1,0];
+}
+```
