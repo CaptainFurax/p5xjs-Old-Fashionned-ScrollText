@@ -6,7 +6,7 @@
   + [.oO° Online Demo °Oo.](https://captainfurax.github.io/p5xjs-Old-Fashionned-ScrollText/)
   + Specs : 
     + Ordered your bitmap font in ASCII Code...order !
-    +   ```javascript
+```javascript
   rollUpd() {
     // remove tail element and place it to head with a single line of code !
     this.body.push( this.body.shift() )
