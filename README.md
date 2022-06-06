@@ -8,6 +8,7 @@
     + 2D Canvas, very smooth and fast at only 50fps with a 64x64px character font. 
     + Organize your bitmap font by ASCII Code...order !
     + Copy your chr indexed by their code, sub 32 [ first chr == space ] and mult by the width [ here , 64px ]  
+    + ![ASCII-Ordered-Font](https://github.com/CaptainFurax/p5xjs-Old-Fashionned-ScrollText/blob/main/FONT-32x32-st.png)
 ```javascript
   for ( i = 0; i < snts.length; i++ ) { 
     //snts[i] = snts[i].toUpperCase();
