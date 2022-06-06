@@ -14,5 +14,4 @@
       blocks[i].push( createGraphics(64,64) );
       blocks[i][j].image( fnt.get((snts[i].charCodeAt(j)-32)*64, 0, 64, 64),0, 0, 64, 64 );
     }
-  }
   }```
