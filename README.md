@@ -3,11 +3,15 @@
 ![OldFashionned-ScrollText](https://github.com/CaptainFurax/p5xjs-Old-Fashionned-ScrollText/blob/main/CPT2206061846-640x480-3.png)
 
 + Today, playing with an Old Fx : An ASCII-Ordered Scrolltext over a Bitmap :)
-  + [.oO° Online Demo °Oo.](https://captainfurax.github.io/p5js-Perlin-3D-Terrain/)
+  + [.oO° Online Demo °Oo.](https://captainfurax.github.io/p5xjs-Old-Fashionned-ScrollText/)
   + Specs : 
-    + Perlin Noise 3D Terrain Generator based on [Daniel Shiffman's Coding Train](https://www.youtube.com/watch?v=IKB1hWWedMk)
-    + Port from Java Processing to Javascript Processing [ p5.js ]
-    + WEBLGL Canvas, 30fps.
-    + 'Responsive' Canvas-> Resize & Fit on 4:3 ratio to optimize max. available space
-    + Arrows keys to move left & right
-    + Space bar to swap rendering.
+    + Ordered your bitmap font in ASCII Code...order !
+    +   ```javascript
+  rollUpd() {
+    // remove tail element and place it to head with a single line of code !
+    this.body.push( this.body.shift() )
+    // copying prev. head coords to new one
+    if ( this.body.length > 1 ) this.body[ this.body.length-1 ] = this.body[ this.body.length-2 ].copy()
+    // adding the direction to the head
+    this.getHead().add( vDir )
+  }
