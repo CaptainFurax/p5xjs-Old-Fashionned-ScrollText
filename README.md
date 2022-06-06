@@ -16,4 +16,10 @@
     }
   }
 ```
-+ Copy your chr indexed by their code, sub 32 [ first chr == space ] and mult by by the width [ here , 64px ]  
++ After, i just play with pixels blending :
+  + to create a 'neon' fx on rasters (ADD)
+  + and color the characters( a bigger raster with 'HARD_LIGHT' blending over them )
++ Tricks :
+  + using image + get functions : 
+    + is x2.5 Faster -> ```javascriptblocks[i][j].image( fnt.get((snts[i].charCodeAt(j)-32)*64, 0, 64, 64), 0, 0, 64, 64 );```
+    + than "copy" function : ```javascript blocks[i][j].copy( fnt, (snts[i].charCodeAt(j)-32)*64, 0, 64, 64, 0, 0, 64, 64 );```
