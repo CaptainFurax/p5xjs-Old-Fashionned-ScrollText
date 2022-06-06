@@ -5,7 +5,7 @@
 + Today, playing with an Old Fx : An ASCII-Ordered Scrolltext built over a Bitmap :)
   + [.oO° Online Demo °Oo.](https://captainfurax.github.io/p5xjs-Old-Fashionned-ScrollText/)
   + Specs : 
-    + 2D Canvas, very smooth and fast at only 50fps. 
+    + 2D Canvas, very smooth and fast at only 50fps with a 64x64px character font. 
     + Ordered your bitmap font in ASCII Code...order !
     + Copy your chr indexed by their code, sub 32 [ first chr == space ] and mult by by the width [ here , 64px ]  
 ```javascript
@@ -20,7 +20,7 @@
 + After, i just play with pixels blending :
   + to create a 'neon' fx on rasters (ADD)
   + and color the characters( a bigger raster with 'HARD_LIGHT' blending over them )
-  + sliding the Masked-Rasters bitmap used in background with a shifted offset, allow you to very simply change the characteres colors at each sentences
+  + sliding the Masked-Rasters bitmap used in background with a shifted offset, allow you to very simply change the characters colors at each sentences
 + Tricks :
   + using combination of image() + get() functions is x2.5 faster with buffered(logical screen) - which is not true with physical screen :
 ```javascript
