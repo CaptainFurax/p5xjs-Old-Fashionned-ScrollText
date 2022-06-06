@@ -6,7 +6,7 @@
   + [.oO° Online Demo °Oo.](https://captainfurax.github.io/p5xjs-Old-Fashionned-ScrollText/)
   + Specs : 
     + 2D Canvas, very smooth and fast at only 50fps with a 64x64px character font. 
-    + Ordered your bitmap font in ASCII Code...order !
+    + Organize your bitmap font by ASCII Code...order !
     + Copy your chr indexed by their code, sub 32 [ first chr == space ] and mult by by the width [ here , 64px ]  
 ```javascript
   for ( i = 0; i < snts.length; i++ ) { 
