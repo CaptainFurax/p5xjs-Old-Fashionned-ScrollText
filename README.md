@@ -22,9 +22,8 @@
 + Tricks :
   + using image + get functions is x2.5 faster with buffered(logical screen - which is not true with physical screen) :
 ```javascript
+// is better 
 blocks[i][j].image( fnt.get((snts[i].charCodeAt(j)-32)*64, 0, 64, 64), 0, 0, 64, 64 );
-```
-  + than "copy" function :
-```javascript
+// than "copy" function :
 blocks[i][j].copy( fnt, (snts[i].charCodeAt(j)-32)*64, 0, 64, 64, 0, 0, 64, 64 );
 ```
