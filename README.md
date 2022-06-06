@@ -22,15 +22,14 @@
   + to create a 'neon' fx on rasters (ADD)
   + and color the characters( a bigger raster with 'HARD_LIGHT' blending over them )
   + sliding the Masked-Rasters bitmap used in background with a shifted offset, allow you to very simply change the characters colors at each sentences
-+ Tricks :
-  + using combination of image() + get() functions is x2.5 faster with buffered(logical screen) - which is not true with physical screen :
++ Tricks #1 : Using combination of image() + get() functions is x2.5 faster with buffered(logical screen) - which is not true with physical screen :
 ```javascript
 // is better 
 blocks[i][j].image( fnt.get((snts[i].charCodeAt(j)-32)*64, 0, 64, 64), 0, 0, 64, 64 );
 // than "copy" function :
 blocks[i][j].copy( fnt, (snts[i].charCodeAt(j)-32)*64, 0, 64, 64, 0, 0, 64, 64 );
 ```
-      + Shifting/scrolling the buffered rasters with 2 logical screens :
++ Tricks #2 : Shifting/scrolling the buffered rasters with 2 logical screens :
 ```javascript
 SwapMeIamFamous=_=>
 {
