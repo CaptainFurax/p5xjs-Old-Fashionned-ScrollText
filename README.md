@@ -5,6 +5,7 @@
 + Today, playing with an Old Fx : An ASCII-Ordered Scrolltext over a Bitmap :)
   + [.oO° Online Demo °Oo.](https://captainfurax.github.io/p5xjs-Old-Fashionned-ScrollText/)
   + Specs : 
+    + 2D Canvas, very moothly and fast at only 50fps. 
     + Ordered your bitmap font in ASCII Code...order !
     + Copy your chr indexed by their code, sub 32 [ first chr == space ] and mult by by the width [ here , 64px ]  
 ```javascript
