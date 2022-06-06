@@ -30,7 +30,7 @@ blocks[i][j].image( fnt.get((snts[i].charCodeAt(j)-32)*64, 0, 64, 64), 0, 0, 64,
 // than "copy" function :
 blocks[i][j].copy( fnt, (snts[i].charCodeAt(j)-32)*64, 0, 64, 64, 0, 0, 64, 64 );
 ```
-  + Shifting/scrolling the buffered rasters with 2 logical screens :
+      + Shifting/scrolling the buffered rasters with 2 logical screens :
 ```javascript
 SwapMeIamFamous=_=>
 {
