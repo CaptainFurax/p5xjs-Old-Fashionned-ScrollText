@@ -21,5 +21,5 @@
   + and color the characters( a bigger raster with 'HARD_LIGHT' blending over them )
 + Tricks :
   + using image + get functions : 
-    + is x2.5 Faster -> ```javascriptblocks[i][j].image( fnt.get((snts[i].charCodeAt(j)-32)*64, 0, 64, 64), 0, 0, 64, 64 );```
+    + is x2.5 Faster -> ```javascript blocks[i][j].image( fnt.get((snts[i].charCodeAt(j)-32)*64, 0, 64, 64), 0, 0, 64, 64 );```
     + than "copy" function : ```javascript blocks[i][j].copy( fnt, (snts[i].charCodeAt(j)-32)*64, 0, 64, 64, 0, 0, 64, 64 );```
