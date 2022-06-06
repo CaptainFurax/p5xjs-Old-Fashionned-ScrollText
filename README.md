@@ -6,12 +6,13 @@
   + [.oO° Online Demo °Oo.](https://captainfurax.github.io/p5xjs-Old-Fashionned-ScrollText/)
   + Specs : 
     + Ordered your bitmap font in ASCII Code...order !
+    + Copy your chr indexed by their code, sub 32 [ first chr == space ] and mult by by the width [ here , 64px ]  
 ```javascript
-  rollUpd() {
-    // remove tail element and place it to head with a single line of code !
-    this.body.push( this.body.shift() )
-    // copying prev. head coords to new one
-    if ( this.body.length > 1 ) this.body[ this.body.length-1 ] = this.body[ this.body.length-2 ].copy()
-    // adding the direction to the head
-    this.getHead().add( vDir )
+  for ( i = 0; i < snts.length; i++ ) { 
+    //snts[i] = snts[i].toUpperCase();
+    for ( j = 0; j < snts[i].length; j++ ) {
+      blocks[i].push( createGraphics(64,64) );
+      blocks[i][j].image( fnt.get((snts[i].charCodeAt(j)-32)*64, 0, 64, 64),0, 0, 64, 64 );
+    }
+  }
   }```
