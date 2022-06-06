@@ -3,7 +3,6 @@ preload=_=> { fnt = loadImage("rsc/font-ascii_64x64.png"); }
 let cvSiz;
 //
 setup=_=> {
-
   pixelDensity(1);
   frameRate(50);
   angleMode(DEGREES);
@@ -74,9 +73,7 @@ setup=_=> {
   windowResized();
   SwapMeIamFamous();
 }
-const sleep = (millis) => { 
-  return new Promise(resolve => setTimeout(resolve, millis)) 
-}
+//
 function draw() {
   background(0);
   // 'Neon' Rasters
