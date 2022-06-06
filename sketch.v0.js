@@ -11,7 +11,7 @@ setup=_=> {
   //
   ix = 656; sino = fade = 0; p = -1;
   //
-  rasters = []; t = [];
+  rasters = [];
   f = [false, false, false];
   Pal = [ [0,6,0], [0,0,6], [6,0,0], [6,6,0], [6,0,6], [0,6,6] ];
   buffers = [ createGraphics(640,480), createGraphics(640,480) ];
