@@ -15,4 +15,4 @@
       blocks[i][j].image( fnt.get((snts[i].charCodeAt(j)-32)*64, 0, 64, 64),0, 0, 64, 64 );
     }
   }
-```
+```+ Copy your chr indexed by their code, sub 32 [ first chr == space ] and mult by by the width [ here , 64px ]  
