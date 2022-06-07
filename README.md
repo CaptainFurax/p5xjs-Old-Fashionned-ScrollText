@@ -22,9 +22,8 @@
   }
 ```
 + After, i just play with pixels blending :
-  + to create a 'neon' fx on rasters (ADD)
-  + and color the characters( a bigger raster with 'HARD_LIGHT' blending over them )
-  + sliding the Masked-Rasters bitmap used in background with a shifted offset, allow you to very simply change the characters colors at each sentences
+  + To color the characters( a bigger raster with 'HARD_LIGHT' blending over them )
+  + Sliding the Masked-Rasters bitmap used in background with a shifted offset, allow you to very simply change the characters colors at each sentences
 + Tricks #1 : Using combination of image() + get() functions is x2.5 faster with buffered(logical screen) - which is not true with physical screen :
 ```javascript
 // is better 
